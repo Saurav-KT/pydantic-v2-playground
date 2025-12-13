@@ -87,3 +87,15 @@ Rebuild the internal pydantic-core model'''
 ✔ You dynamically add fields or annotations
 ✔ You attach validators after class creation
 ✔ You import models in circular dependency scenarios
+
+
+| Config                    | FastAPI Benefit           |
+| ------------------------- | ------------------------- |
+| `strict`                  | Prevents bad client input |
+| `extra=forbid`            | Secure APIs               |
+| `extra=allow`             | Flexible payloads         |
+| `validate_assignment`     | Safe internal updates     |
+| `populate_by_name`        | Frontend compatibility    |
+| `frozen`                  | Immutable responses       |
+| `from_attributes`         | ORM support               |
+| `arbitrary_types_allowed` | Internal DI objects       |

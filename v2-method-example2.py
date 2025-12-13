@@ -3,16 +3,26 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class A(BaseModel):
-    b: "B"
+# Pydantic V2 forward reference example
+class Department(BaseModel):
+    name: str
+    head: "User"
 
-class B(BaseModel):
-    a: A
+class User(BaseModel):
+    name: str
+    department: Department
 
-# Try to create an instance (WILL FAIL)
-# A(b={"a": {"b": None}})
-
-A.model_rebuild()
-B.model_rebuild()
-
-A(b={"a": {"b": None}})   # Works now
+data = {
+    "name": "Engineering",
+    "head": {
+        "name": "Saurav",
+        "department": {
+            "name": "Engineering",
+            "head": {
+                "name": "Saurav",
+                "department": None
+            }
+        }
+    }
+}
+print(data)
