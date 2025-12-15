@@ -1,6 +1,6 @@
 from __future__ import annotations
 from pydantic import BaseModel
-
+from typing import List
 from typing import Optional
 
 # Pydantic V2 forward reference example.Pydantic v2  handles circular (recursive) references
@@ -28,9 +28,6 @@ data = {
 }
 # print(data)
 
-
-
-from typing import List
 
 # Important Limitation (Runtime Data Cycles)
 class Author(BaseModel):
