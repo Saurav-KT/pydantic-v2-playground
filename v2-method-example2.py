@@ -1,7 +1,5 @@
 from __future__ import annotations
 from pydantic import BaseModel
-from typing import List
-from typing import Optional
 
 # Pydantic V2 forward reference example.Pydantic v2  handles circular (recursive) references
 # automatically in most cases
