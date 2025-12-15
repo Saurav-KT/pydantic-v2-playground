@@ -1,4 +1,4 @@
-# This repository contains the Most useful features of pydantic v2 in Python.
+# This repository contains the most useful features of pydantic v2 in Python.
 | Feature           | Why useful                           |
 | ----------------- | ------------------------------------ |
 | BeforeValidator  | Transform/clean input before parsing |
